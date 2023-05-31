@@ -292,6 +292,7 @@ export const engToKor = (eng: string) => {
   let result = "";
   let stack: string[][] = [];
   let cur: string[] = [];
+  console.log(stack);
   for (let i = 0; i < engArr.length; i++) {
     const eng = engArr[i];
     if (ENG_KEY.includes(eng)) {
@@ -307,7 +308,7 @@ export const engToKor = (eng: string) => {
             cur.push(eng);
           }
           // 중중
-          else if (jungDict[cur[0]] && jungDict[eng]) {
+          else if (jungDict[cur[0] + eng]) {
             cur.push(eng);
           } else {
             stack.push(cur);
@@ -424,5 +425,3 @@ export const engToKor = (eng: string) => {
   });
   return result;
 };
-
-module.exports = { engToKor, korToEng };
