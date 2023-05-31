@@ -32,6 +32,13 @@ const Index: React.FunctionComponent = () => {
           image={THREEJS}
           link="/threejs"
         />
+        <IndexGridItem
+          motionVariants={item}
+          title="KORENG 변환"
+          description="한글을 영어로, 영어를 한글로"
+          image={THREEJS}
+          link="/koreng"
+        />
       </motion.main>
     </motion.div>
   );
